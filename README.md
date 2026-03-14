@@ -1,4 +1,4 @@
-# HDDB
+# HDDB:Efficient In-Storage SQL Database Search Using Hyperdimensional Computing on Ferroelectric NAND Flash
 
 This is the repo for the software query simulation of the paper: HDDB: Efficient In-Storage SQL Database Search Using Hyperdimensional Computing on Ferroelectric NAND Flash
 
