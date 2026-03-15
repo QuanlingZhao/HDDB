@@ -3,7 +3,28 @@
 This is the repo for the software query simulation of the paper: HDDB: Efficient In-Storage SQL Database Search Using Hyperdimensional Computing on Ferroelectric NAND Flash
 
 **Abstract**: Hyperdimensional Computing (HDC) encodes information and data into high-dimensional distributed vectors that can be manipulated using simple bitwise operations and similarity searches, offering parallelism, low-precision hardware friendliness, and strong robustness to noise. These properties are a natural fit for SQL database workloads dominated by predicate evaluation and scans, which demand low energy and low latency over large fact tables. Notably, HDC’s noise-tolerance maps well onto emerging ferroelectric NAND (FeNAND) memories, which provide ultra-high density and in-storage compute capability but suffer from elevated raw bit-error rates. In this work, we propose HDDB, a hardware–software co-design that combines HDC with FeNAND multi-level cells (MLC) to perform in-storage SQL predicate evaluation and analytics with massive parallelism and minimal data movement. Particularly, we introduce novel HDC encoding techniques for standard SQL data tables and formulate predicate-based filtering and aggregation as highly efficient HDC operations that can happen in-storage. By exploiting the intrinsic redundancy of HDC, HDDB maintains correct predicate and decode outcomes under substantial device noise (up to 10\% randomly corrupted TLC cells) without explicit error-correction overheads. Experiments on TPC-DS fact tables show that HDDB achieves up to 80.6× lower latency and 12,636× lower energy consumption compared to conventional CPU/GPU SQL database engines, suggesting that HDDB provides a practical substrate for noise-robust, memory-centric database processing.
- 
+
+## Encode String and Numerical Cells
+
+![string_enc.png](string_enc.png)
+Mapping strings over a fixed dictionary into hypervector
+
+![number_enc.png](number_enc.png)
+Mapping numbers over a range into hypervector 
+
+## In-Storage-Processing Design
+
+![isp.png](isp.png)
+Overview of HDDB/ISP (a) Reconfigurable H-tree connected architecture (b) Predicate evaluation dataflow
+
+
+
+## Random Predicate Evaluation over TPC-DS Fact Tables
+
+![eval.png](eval.png)
+HDDB (a) Predicate evaluation (b) Decode quality
+
+
 ## Requirements
  - numpy
  - cupy
