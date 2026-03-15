@@ -6,11 +6,8 @@ This is the repo for the software query simulation of the paper: HDDB: Efficient
 
 ## Encode String and Numerical Cells
 
-![string_enc.png](string_enc.png)
-Mapping strings over a fixed dictionary into hypervector
-
-![number_enc.png](number_enc.png)
-Mapping numbers over a range into hypervector 
+![enc.png]enc.png)
+Mapping strings over a fixed dictionary and numbers over a range into hypervector
 
 ## In-Storage-Processing Design
 
